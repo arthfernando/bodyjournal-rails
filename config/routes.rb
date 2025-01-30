@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get "home/index"
-  root "home#index"
+  get "dashboard", to: "pages#dashboard"
+  root "pages#home"
   resource :session
   resource :registration, only: %i[new create]
   resources :passwords, param: :token
